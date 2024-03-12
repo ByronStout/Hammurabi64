@@ -18,7 +18,7 @@
     <AutoLaunchName>hammurabi.prg</AutoLaunchName>
     <NoSingleFileBuild>False</NoSingleFileBuild>
     <CreatedWithVersion>CBM prg Studio 4.0.1</CreatedWithVersion>
-    <HasGitRepo>True</HasGitRepo>
+    <HasGitRepo>False</HasGitRepo>
     <GitIgnoreList />
     <UsingKickAssembler>False</UsingKickAssembler>
     <KickOutputFile />
@@ -75,7 +75,7 @@
             <Regions />
             <Breakpoints />
             <Bookmarks />
-            <Topmost>False</Topmost>
+            <Topmost>True</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>
         <SourceFile>

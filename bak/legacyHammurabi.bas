@@ -1,22 +1,12 @@
-100 print "{clear}{white}welcome!": print
-101 print"try your hand at governing"
-102 print"ancient sumeria successfully"
-113 print "for a 10-yr term of office."
-114 print "---------------------------------": print
-115 print "<< press any key to begin >>"
-116 get a$: if a$ = "" then goto 116
+100 print "{clear}{white}welcome": print"try your hand at governing ancient sumeria"
+110 print "successfully for a 10-yr term of office.":print
 
 
 !- **************************************************************************
 !- * Variables
-!- *            z        The Year counter
-!- *            d        # of people that starved in a year
-!- *            i        # of people came to the city in a year
-!- *            y       
-!- *
-!- *            p       Population in the City
-!- *            s       Storage (Bushels of grain in Storage)
-!- *            a       Acres of Land owned
+!- *           z        The Year counter
+!- *           d        # of people that starved in a year
+!-             i        # of people came to the city in a year
 
 !- **************************************************************************
 
@@ -24,30 +14,19 @@
 130 z=0:p=95:s=2800:h=3000:e=h-s
 140 y=3:a=h/y:i=5:q=1
 150 d=0
-
-!- start of a turn (this is the target of the goto)
 160 print:print
-161 z = z + 1
-162 print "{clear}{white}hammurabi!": print
-163 print"i beg to report to you in year" z : print
-
-170 print d"people starved"
-175 print i"people came to the city."
+162 print "hamurabi:  i beg to report to you,":z=z+1
+170 print "in year"z","d"people starved,"i"came to the city."
 180 p=p+i
 
 200 if q>0 then 230
 210 p=int(p/2)
 220 print "a horrible plague struck!  half the people died."
-
-230 print "--------------------------------"
-232 print p"is the current population" :print
-
-240 print a"acres of land are owned"
-250 print y"bushels were harvested per acre"
-260 print e"bushels were eaten by rats!" 
-265 print "--------------------------------"
-270 print s"bushels are in storage":print
-
+230 print "population is now"p
+240 print "the city now owns"a"acres."
+250 print "you harvested"y"bushels per acre."
+260 print "rats ate"e"bushels."
+270 print "you now have"s"bushels in store.":print
 280 if z=11 then 1040
 290 c=int(10*rnd(1)):y=c+17
 300 print "land is trading at"y"bushels per acre."

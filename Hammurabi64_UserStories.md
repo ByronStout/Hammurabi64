@@ -86,7 +86,7 @@ As a developer, I want all tunable rates defined as named constants so that bala
 - Formula code references constants, not literals.
 
 ### H64-007 — Seeded RNG from hardware source
-**Size:** S · **Priority:** Must · **Status:** Not Started
+**Size:** S · **Priority:** Must · **Status:** Done
 
 As a developer, I want `RND()` seeded from a changing hardware source so that games differ run-to-run.
 - Seed captured from CIA timer or raster value at first keypress.

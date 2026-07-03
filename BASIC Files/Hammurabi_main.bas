@@ -34,6 +34,11 @@
 !- *   4 = Aqueduct     5 = Temple       6 = Marketplace  7 = Tax Office
 !- **************************************************************************
 
+10 rem *** rng seed capture (10-90) - h64-007 ***
+20 print "press any key to begin"
+30 get ky$:if ky$="" then 30
+40 x=rnd(-ti)
+
 100 rem *** game initialization (100-190) ***
 110 rem *** core scalar state - h64-003 ***
 120 yr%=1:po%=95:gr%=2800:la%=1000:pr%=0

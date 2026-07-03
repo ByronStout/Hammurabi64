@@ -64,7 +64,7 @@ As a developer, I want all core scalar state variables initialized so that the g
 - Integer type (`%`) used for all countable state.
 
 ### H64-004 — Building-level array declared
-**Size:** XS · **Priority:** Must · **Status:** Not Started
+**Size:** XS · **Priority:** Must · **Status:** Done
 
 As a developer, I want the building-level array set up so that building state persists across years.
 - `DIM BL%(7)` with index map 0=Irrigation … 7=Tax Office.

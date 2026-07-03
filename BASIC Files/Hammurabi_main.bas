@@ -25,11 +25,20 @@
 !- *     TG  HY  SE  EA  WK  BR  DR  TX  SR
 !- **************************************************************************
 
+!- **************************************************************************
+!- * Building Levels Array (H64-004)
+!- * DIM BL%(7) - building levels, index 0-7. Numeric arrays are auto-zeroed
+!- * by BASIC V2 on DIM, so all levels start at 0.
+!- *
+!- *   0 = Irrigation   1 = Granary      2 = City Walls   3 = Levees
+!- *   4 = Aqueduct     5 = Temple       6 = Marketplace  7 = Tax Office
+!- **************************************************************************
+
 100 rem *** game initialization (100-190) ***
 110 rem *** core scalar state - h64-003 ***
 120 yr%=1:po%=95:gr%=2800:la%=1000:pr%=0
 130 pl%=0:fe%=0:st%=0:bi%=0:im%=0
 140 de%=0:hv%=0:hd%=0
 
-150 rem *** temp debug print - remove once h64-011 status panel exists ***
-160 print yr%;po%;gr%;la%;pr%;pl%;fe%;st%;bi%;im%;de%;hv%;hd%
+145 rem *** building level array - h64-004 ***
+146 dim bl%(7)

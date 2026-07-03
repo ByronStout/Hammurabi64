@@ -56,7 +56,7 @@ As a developer, I want documented naming conventions so that two-character BASIC
 - All names unique within first two characters.
 
 ### H64-003 — Core scalar state variables declared
-**Size:** S · **Priority:** Must · **Status:** Not Started
+**Size:** S · **Priority:** Must · **Status:** Done
 
 As a developer, I want all core scalar state variables initialized so that the game has a single source of truth for state.
 - Declares/initializes `YR% PO% GR% LA% PR% PL% FE% ST% BI% IM% DE% HV% HD%`.

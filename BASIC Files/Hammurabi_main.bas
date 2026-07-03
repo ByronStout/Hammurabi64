@@ -47,9 +47,6 @@
 160 dim bc%(7),bu%(7),bn$(7)
 170 for bg=0 to 7:read bc%(bg),bu%(bg),bn$(bg):next bg
 
-180 rem *** temp debug print - remove once building ui exists ***
-190 for bg=0 to 7:print bc%(bg);bu%(bg);bn$(bg):next bg
-
 200 rem *** building economics data (200-290) - h64-005 ***
 210 data 800,40,"irrigation"
 220 data 600,20,"granary"
@@ -59,3 +56,7 @@
 260 data 500,15,"temple"
 270 data 750,30,"marketplace"
 280 data 850,35,"tax office"
+
+300 rem *** tunable constants (300-390) - h64-006 ***
+310 tg%=1000:hy%=3:se=.5:ea%=20:wk%=10
+320 br=.03:dr=.02:tx=.5:sr=.45

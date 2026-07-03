@@ -79,7 +79,7 @@ As a developer, I want building cost/upkeep/name tables read from DATA so that e
 - Values match spec (e.g. Irrigation 800/40, Granary 600/20, …).
 
 ### H64-006 — Tunable constants centralized
-**Size:** XS · **Priority:** Must · **Status:** Not Started
+**Size:** XS · **Priority:** Must · **Status:** Done
 
 As a developer, I want all tunable rates defined as named constants so that balancing is a single-location edit.
 - Defines `TG% HY% SE EA% WK% BR DR TX SR` with suggested values.

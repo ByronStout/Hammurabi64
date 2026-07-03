@@ -48,7 +48,7 @@ As a developer, I want to confirm tokenized output stays within BASIC V2 limits 
 - Build produces a loadable `.prg` with no tokenizer warnings.
 
 ### H64-002 — Variable-naming convention guard
-**Size:** XS · **Priority:** Must · **Status:** Not Started
+**Size:** XS · **Priority:** Must · **Status:** Done
 
 As a developer, I want documented naming conventions so that two-character BASIC V2 name collisions are avoided.
 - Convention recorded: `XX%` integer, `XX` float, `XX$` string.

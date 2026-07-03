@@ -42,3 +42,20 @@
 
 145 rem *** building level array - h64-004 ***
 146 dim bl%(7)
+
+150 rem *** building economics tables - h64-005 ***
+160 dim bc%(7),bu%(7),bn$(7)
+170 for bg=0 to 7:read bc%(bg),bu%(bg),bn$(bg):next bg
+
+180 rem *** temp debug print - remove once building ui exists ***
+190 for bg=0 to 7:print bc%(bg);bu%(bg);bn$(bg):next bg
+
+200 rem *** building economics data (200-290) - h64-005 ***
+210 data 800,40,"irrigation"
+220 data 600,20,"granary"
+230 data 1000,30,"city walls"
+240 data 700,25,"levees"
+250 data 900,35,"aqueduct"
+260 data 500,15,"temple"
+270 data 750,30,"marketplace"
+280 data 850,35,"tax office"

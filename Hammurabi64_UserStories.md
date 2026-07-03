@@ -71,7 +71,7 @@ As a developer, I want the building-level array set up so that building state pe
 - All levels initialized to 0 at game start.
 
 ### H64-005 — Building economics tables loaded from DATA
-**Size:** S · **Priority:** Must · **Status:** Not Started
+**Size:** S · **Priority:** Must · **Status:** Done
 
 As a developer, I want building cost/upkeep/name tables read from DATA so that economics are data-driven.
 - `DIM BC%(7) BU%(7) BN$(7)`.

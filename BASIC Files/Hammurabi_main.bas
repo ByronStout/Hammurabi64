@@ -20,7 +20,7 @@
 !- *   Building arrays:
 !- *     BL  BC  BU  BN
 !- *   Derived / per-turn working variables:
-!- *     YP  SC  DN  PC  RC  UP  AD  TH
+!- *     YP  SC  DN  PC  RC  UP  AD  TH  OV
 !- *   Constants:
 !- *     TG  HY  SE  EA  WK  BR  DR  TX  SR
 !- **************************************************************************
@@ -65,3 +65,33 @@
 300 rem *** tunable constants (300-390) - h64-006 ***
 310 tg%=1000:hy%=3:se=.5:ea%=20:wk%=10
 320 br=.03:dr=.02:tx=.5:sr=.45
+
+!- **************************************************************************
+!- * Main Turn Loop (H64-010)
+!- * OV% = game-over flag (0=playing, nonzero=victory or loss fired).
+!- * Phase order per spec Sec.3: display -> advisor -> decisions -> resolution.
+!- * Each phase is a stub GOSUB target until its own story fills it in.
+!- **************************************************************************
+
+500 rem *** main turn loop (500-590) - h64-010 ***
+505 ov%=0
+510 gosub 3000 : rem display status (stub - real in h64-011)
+520 gosub 5000 : rem advisor report (stub - real in h64-070+)
+530 gosub 7000 : rem player decisions (stub - real in h64-013/020-026)
+540 gosub 1000 : rem end-year resolution (stub - real in h64-030+)
+550 if ov%=0 then 510
+560 print "game over (stub)"
+570 end
+
+1000 rem *** end-year resolution (1000-1990) - stub, real in h64-030+ ***
+1010 yr%=yr%+1
+1040 return
+
+3000 rem *** display status (3000-3990) - stub, real in h64-011 ***
+3030 return
+
+5000 rem *** advisor report (5000-5990) - stub, real in h64-070+ ***
+5010 return
+
+7000 rem *** player decisions (7000-7990) - stub, real in h64-013/020-026 ***
+7010 return

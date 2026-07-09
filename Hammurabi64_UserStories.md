@@ -97,7 +97,7 @@ As a developer, I want `RND()` seeded from a changing hardware source so that ga
 ## Sprint 1 — Turn Skeleton & Status Display
 
 ### H64-010 — Turn loop scaffold
-**Size:** M · **Priority:** Must · **Status:** Not Started
+**Size:** M · **Priority:** Must · **Status:** Done
 
 As a developer, I want the year/turn loop structure in place so that resolution steps can be slotted in.
 - Loop advances `YR%` each cycle.

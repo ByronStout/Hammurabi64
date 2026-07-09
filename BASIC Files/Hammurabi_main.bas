@@ -23,6 +23,8 @@
 !- *     YP  SC  DN  PC  RC  UP  AD  TH  OV
 !- *   Constants:
 !- *     TG  HY  SE  EA  WK  BR  DR  TX  SR
+!- *   Utility / scratch (keypress buffer, RND seed throwaway, loop index):
+!- *     KY  X   BG
 !- **************************************************************************
 
 !- **************************************************************************

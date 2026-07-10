@@ -105,7 +105,7 @@ As a developer, I want the year/turn loop structure in place so that resolution 
 - Loop exits on victory or loss flag.
 
 ### H64-011 — 40×25 status panel layout
-**Size:** M · **Priority:** Must · **Status:** Not Started
+**Size:** M · **Priority:** Must · **Status:** In Progress
 
 As a player, I want a fixed status panel so that I can see vital numbers at a glance.
 - Renders status bar (title, `YR%`, `PO%`) on rows 1–2.

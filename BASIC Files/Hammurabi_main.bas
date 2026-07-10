@@ -23,8 +23,9 @@
 !- *     YP  SC  DN  PC  RC  UP  AD  TH  OV
 !- *   Constants:
 !- *     TG  HY  SE  EA  WK  BR  DR  TX  SR
-!- *   Utility / scratch (keypress buffer, RND seed throwaway, loop index):
-!- *     KY  X   BG
+!- *   Utility / scratch (keypress buffer, RND seed throwaway, loop index,
+!- *   border string, string-build scratch):
+!- *     KY  X   BG  BD  B
 !- **************************************************************************
 
 !- **************************************************************************
@@ -54,6 +55,9 @@
 160 dim bc%(7),bu%(7),bn$(7)
 170 for bg=0 to 7:read bc%(bg),bu%(bg),bn$(bg):next bg
 
+180 rem *** ui strings - h64-011 ***
+190 bd$="---------------------------------------"
+
 200 rem *** building economics data (200-290) - h64-005 ***
 210 data 800,40,"irrigation"
 220 data 600,20,"granary"
@@ -76,8 +80,8 @@
 !- **************************************************************************
 
 500 rem *** main turn loop (500-590) - h64-010 ***
-505 ov%=0
-510 gosub 3000 : rem display status (stub - real in h64-011)
+505 ov%=0:print chr$(147)
+510 gosub 3000 : rem display status (h64-011)
 520 gosub 5000 : rem advisor report (stub - real in h64-070+)
 530 gosub 7000 : rem player decisions (stub - real in h64-013/020-026)
 540 gosub 1000 : rem end-year resolution (stub - real in h64-030+)
@@ -89,11 +93,25 @@
 1010 yr%=yr%+1
 1040 return
 
-3000 rem *** display status (3000-3990) - stub, real in h64-011 ***
-3030 return
+3000 rem *** display status (3000-3990) - h64-011 ***
+3010 print chr$(19);
+3020 print bd$
+3030 print "hammurabi 64";tab(19);"year";yr%;tab(30);"pop";po%
+3040 print bd$
+3050 print "grain";gr%;tab(14);"land";la%;tab(27);"price";pr%
+3060 print "fed";fe%;"/";po%;tab(14);"plant";pl%;tab(27);"seed";int(pl%*se+.5)
+3070 print bd$
+3080 b$="":for bg=0 to 7
+3090 b$=b$+mid$("irgrwaleaqtemata",bg*2+1,2)+mid$(str$(bl%(bg)),2)+" "
+3100 next bg:print b$
+3110 print "upkeep";up%;tab(14);"admin";ad%;
+3120 print tab(27);"threat ";mid$("low med high",th%*4+1,4)
+3130 return
 
 5000 rem *** advisor report (5000-5990) - stub, real in h64-070+ ***
 5010 return
 
 7000 rem *** player decisions (7000-7990) - stub, real in h64-013/020-026 ***
-7010 return
+7010 rem *** temp debug - key-step years until h64-013 real input exists ***
+7020 get ky$:if ky$="" then 7020
+7030 return
